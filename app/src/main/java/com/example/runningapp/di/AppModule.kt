@@ -2,6 +2,7 @@ package com.example.runningapp.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.runningapp.db.RunDAO
 import com.example.runningapp.db.RunningDatabase
 import com.example.runningapp.other.Constants.RUNNING_DATABASE_NAME
 import dagger.Module
@@ -19,13 +20,16 @@ object AppModule {
     @Provides
     fun provideRunningDatabase(
         @ApplicationContext app: Context
-    ) = Room.databaseBuilder(
-        app,
-        RunningDatabase::class.java,
-        RUNNING_DATABASE_NAME
-    ).build()
-
+    ) : RunningDatabase {
+        return Room.databaseBuilder(
+            app,
+            RunningDatabase::class.java,
+            RUNNING_DATABASE_NAME
+        ).build()
+    }
     @Singleton
     @Provides
-    fun provideRunDao(db: RunningDatabase) = db.getRunDao()
+    fun provideRunDao(db: RunningDatabase) : RunDAO {
+        return db.getRunDao()
+    }
 }

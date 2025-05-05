@@ -95,8 +95,8 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:19.1.0")
 
     // Dagger Core
-    implementation("com.google.dagger:dagger:2.28.3")
-    ksp("com.google.dagger:dagger-compiler:2.25.2")
+    implementation("com.google.dagger:dagger:2.38.1")
+    ksp("com.google.dagger:dagger-compiler:2.38.1")
 
     // Dagger Android
     api("com.google.dagger:dagger-android:2.28.1")
@@ -107,10 +107,10 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.10.1")
 
     //Dagger - Hilt
-    implementation("com.google.dagger:hilt-android:2.28-alpha")
-    ksp("com.google.dagger:hilt-android-compiler:2.28-alpha")
+    implementation("com.google.dagger:hilt-android:2.38.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.38.1")
 
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     ksp("androidx.hilt:hilt-compiler:1.2.0")
 
     // Easy Permissions
