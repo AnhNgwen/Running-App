@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         bindingMainActivity.bottomNavigationView.setupWithNavController(navController)
+        bindingMainActivity.bottomNavigationView.setOnItemReselectedListener {
+            /* NO-OP */
+        }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
                 when(destination.id) {
@@ -50,5 +53,9 @@ class MainActivity : AppCompatActivity() {
         if(intent?.action == ACTION_SHOW_TRACKING_FRAGMENT) {
             navController.navigate(R.id.action_global_trackingFragment)
         }
+    }
+
+    fun updateToolbarTitle(title: String) {
+        bindingMainActivity.tvToolbarTitle.text = title
     }
 }

@@ -33,7 +33,6 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
 
     private lateinit var runAdapter: RunAdapter
     private lateinit var mainRepository: MainRepository
-
     private lateinit var bindingRun: FragmentRunBinding
 
     private var runs = MediatorLiveData<List<Run>>()
@@ -49,6 +48,7 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
         val runDAO = database.getRunDao()
         mainRepository = MainRepository(runDAO)
         bindingRun = FragmentRunBinding.bind(view)
+
         requestPermissions()
         setupRecyclerView()
 

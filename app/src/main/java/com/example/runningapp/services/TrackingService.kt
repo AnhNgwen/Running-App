@@ -17,13 +17,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.example.runningapp.R
 import com.example.runningapp.other.Constants.ACTION_PAUSE_SERVICE
+import com.example.runningapp.other.Constants.ACTION_SHOW_TRACKING_FRAGMENT
 import com.example.runningapp.other.Constants.ACTION_START_OR_RESUME_SERVICE
 import com.example.runningapp.other.Constants.ACTION_STOP_SERVICE
-import com.example.runningapp.other.Constants.NOTIFICATION_CHANNEL_ID
-import com.example.runningapp.other.Constants.NOTIFICATION_CHANNEL_NAME
-import com.example.runningapp.other.Constants.ACTION_SHOW_TRACKING_FRAGMENT
 import com.example.runningapp.other.Constants.FASTEST_LOCATION_INTERVAL
 import com.example.runningapp.other.Constants.LOCATION_UPDATE_INTERVAL
+import com.example.runningapp.other.Constants.NOTIFICATION_CHANNEL_ID
+import com.example.runningapp.other.Constants.NOTIFICATION_CHANNEL_NAME
 import com.example.runningapp.other.Constants.NOTIFICATION_ID
 import com.example.runningapp.other.Constants.TIMER_UPDATE_INTERVAL
 import com.example.runningapp.other.TrackingUtility
@@ -35,13 +35,11 @@ import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.google.android.gms.maps.model.LatLng
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import javax.inject.Inject
 
 typealias Polyline = MutableList<LatLng>
 typealias Polylines = MutableList<Polyline>

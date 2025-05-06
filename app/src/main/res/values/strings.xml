@@ -5,7 +5,6 @@
         <item>Running Time</item>
         <item>Distance</item>
         <item>Average Speed</item>
-        <item>Calories Burned</item>
     </string-array>
     <!--REMOVE THE API KEY BEFORE PUBLISHING THE CODE-->
     <string name="google_maps_key"
